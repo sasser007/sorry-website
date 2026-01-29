@@ -62,3 +62,8 @@ button {
 .no {
   transition: transform 0.25s ease;
 }
+#funnyText {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
