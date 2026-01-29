@@ -55,3 +55,10 @@ button {
 .no {
   transition: transform 0.3s ease;
 }
+button {
+  touch-action: manipulation;
+}
+
+.no {
+  transition: transform 0.25s ease;
+}
