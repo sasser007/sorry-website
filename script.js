@@ -10,29 +10,22 @@ const messages = [
   "Alright… I’ll wait ❤️"
 ];
 
-function increaseNo() {
+document.addEventListener("DOMContentLoaded", () => {
+  const yesBtn = document.getElementById("yesBtn");
   const noBtn = document.getElementById("noBtn");
   const text = document.getElementById("funnyText");
 
-  scale += 0.25;
-  noBtn.style.transform = "scale(" + scale + ")";
+  yesBtn.addEventListener("click", () => {
+    scale += 0.25;
+    noBtn.style.transform = `scale(${scale})`;
 
-  if (count < messages.length) {
-    text.innerText = messages[count];
-    count++;
-  }
-}
+    if (count < messages.length) {
+      text.textContent = messages[count];
+      count++;
+    }
+  });
+});
 
 function goNext() {
   window.location.href = "gifts.html";
 }
-
-/* Mobile support */
-document.addEventListener("DOMContentLoaded", () => {
-  const yesBtn = document.querySelector(".yes");
-
-  yesBtn.addEventListener("touchstart", function (e) {
-    e.preventDefault();
-    increaseNo();
-  });
-});
